@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Anonim Chat</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="app">
+
+
+    <header>
+
+        <h1>Anonim Chat</h1>
+
+        <div id="status">
+            Bağlanıyor...
+        </div>
+
+    </header>
+
+
+
+    <main id="messages"></main>
+
+
+
+    <form id="messageForm">
+
+        <input
+            id="messageInput"
+            type="text"
+            maxlength="1000"
+            autocomplete="off"
+            placeholder="Mesajını yaz..."
+        >
+
+        <button type="submit">
+            Gönder
+        </button>
+
+    </form>
+
+
+</div>
+
+
+
+<!-- Kullanıcı adı penceresi -->
+
+<div id="nameModal" class="modal">
+
+    <div class="modalBox">
+
+        <h2>Sohbete Katıl</h2>
+
+        <p>
+            Bir takma ad seç.
+        </p>
+
+        <input
+            id="nameInput"
+            type="text"
+            maxlength="24"
+            placeholder="Örn: MaviKedi"
+        >
+
+        <button id="joinButton">
+            Katıl
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- Socket.IO -->
+
+<script
+    src="https://cdn.socket.io/4.8.1/socket.io.min.js">
+</script>
+
+
+<script
+    src="/static/app.js">
+</script>
+
+
+</body>
+
+</html>
